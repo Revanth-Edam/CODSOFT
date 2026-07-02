@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css?v=2">
+</head>
+
+    <input type="radio" name="page-section" id="home" class="section-toggle" checked>
+    <input type="radio" name="page-section" id="about-me" class="section-toggle">
+    <input type="radio" name="page-section" id="services" class="section-toggle">
+    <input type="radio" name="page-section" id="skills" class="section-toggle">
+    <input type="radio" name="page-section" id="projects" class="section-toggle">
+    <input type="checkbox" id="demo-modal" class="section-toggle modal-toggle">
+
+    <header>
+        <div class="logo">
+            <h2>Portfolio</h2>
+            <p>Just another My Blog site</p>
+        </div>
+        <nav>
+            <label for="home" class="nav-link">HOME</label>
+            <label for="about-me" class="nav-link">ABOUT ME</label>
+            <label for="services" class="nav-link">SERVICES</label>
+            <label for="skills" class="nav-link">SKILLS</label>
+            <label for="projects" class="nav-link">PROJECTS</label>
+        </nav>
+    </header>
+
+    <main class="page-main">
+    <section class="hero content-section" id="home-section">
+        <div class="hero-main">
+            <div class="content">
+                <h1>Edam Revanth</h1>
+                <p>
+                    Hi, I am a Java Developer and Web Development Enthusiast.
+                    Passionate about creating efficient applications and
+                    responsive websites.
+                </p>
+
+                <button>Hire Me</button>
+            </div>
+
+            <div class="image">
+                <div class="profile-frame">
+                    <img src="IMG_20250710_111516.jpg" alt="Profile">
+                    <div class="profile-placeholder" aria-hidden="true">RE</div>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+
+    <section class="about content-section" id="about-me-section">
+        <div class="about-img">
+            <div class="profile-frame profile-frame-large">
+                <img src="IMG_20250710_111516.jpg" alt="Profile">
+                <div class="profile-placeholder" aria-hidden="true">RE</div>
+            </div>
+        </div>
+
+        <div class="about-content">
+            <h2>ABOUT ME</h2>
+
+            <p>
+                I am a Computer Science student in specialization of Cyber Security with strong foundations
+                in Java, HTML, CSS and SQL.
+            </p>
+
+            <p>
+                I enjoy developing software solutions and learning
+                new technologies. My goal is to become a professional
+                Full Stack Developer.
+            </p>
+
+            <a href="../../Pictures/Revanth resume.pdf" class="btn" download>
+                DOWNLOAD RESUME
+            </a>
+        </div>
+    </section>
+
+    <section class="info-section content-section" id="services-section">
+        <h2>SERVICES</h2>
+        <p>
+            I build responsive websites, Java-based applications, and basic database-driven solutions.
+            I also help in creating clean UI layouts and improving website performance.
+        </p>
+    </section>
+
+    <section class="info-section content-section" id="skills-section">
+        <h2>SKILLS</h2>
+        <p>
+            <list>
+               <ul>
+    <li><strong>Programming Languages:</strong> Java, HTML, CSS, SQL</li>
+    <li><strong>Web Development:</strong> Responsive Web Design</li>
+    <li><strong>Tools:</strong> Git, GitHub, VS Code</li>
+    <li><strong>Skills:</strong> Problem Solving, Debugging</li>
+              </ul>
+        </p>
+    </section>
+
+    <section class="info-section content-section" id="projects-section">
+        <h2>PROJECTS</h2>
+        <div class="project-card">
+            <h3 class="project-title">Voice Ed: Inclusive Exams for All</h3>
+            <p class="project-desc">Voice Ed is a voice-enabled online examination platform built to make assessments fully accessible for visually impaired students. The system uses Text-to-Speech (TTS) and Speech-to-Text (STT) integration to enable hands-free exam navigation and response entry, while the accessible UI and screen-reader compatibility ensure independent, barrier-free test taking.</p>
+
+            <ul class="project-features">
+                <li>Voice-based navigation and question prompts using TTS.</li>
+                <li>Hands-free answer submission using STT with confidence scoring.</li>
+                <li>Exam creation, scheduling, and automated evaluation tools for instructors.</li>
+                <li>Accessible UI patterns following screen-reader and keyboard-first guidelines.</li>
+                <li>Secure session handling and result export for record keeping.</li>
+            </ul>
+
+            <p class="project-tech"><strong>Technologies:</strong> Java, HTML/CSS, SQL, TTS/STT APIs (e.g., Google Cloud Speech), responsive accessible frontend patterns.</p>
+            <p class="project-role"><strong>Role:</strong> Designed the accessible UI, integrated speech APIs, implemented exam management backend, and tested accessibility with screen-readers.</p>
+
+            <label for="demo-modal" class="btn project-link">View demo / Repo</label>
+        </div>
+    </section>
+
+    <!-- Demo modal (CSS-only) -->
+    <div class="modal-overlay">
+        <div class="modal">
+                        <div class="modal-content">
+                                <h3>Voice Ed: Interactive Demo</h3>
+                                <!-- demo controls use only HTML/CSS: choose question and toggle listening state -->
+                                <input type="checkbox" id="demo-listen" class="demo-listen-toggle">
+                                <input type="radio" name="demo-q" id="demo-q1" class="demo-q-toggle" checked>
+                                <input type="radio" name="demo-q" id="demo-q2" class="demo-q-toggle">
+                                <input type="radio" name="demo-q" id="demo-q3" class="demo-q-toggle">
+
+                                <div class="static-demo" style="margin-top:12px">
+                                    <div class="demo-card">
+                                        <div class="demo-question"><strong>Question:</strong>
+                                            <span class="q q1">What is the output of 2 + 2?</span>
+                                            <span class="q q2">Name the capital city of France.</span>
+                                            <span class="q q3">Which language is commonly used for Android development?</span>
+                                        </div>
+
+                                        <div class="demo-controls">
+                                            <label for="demo-listen" class="demo-btn">Start listening</label>
+                                        </div>
+
+                                        <div class="demo-output">
+                                            <div><strong>Recognized text:</strong></div>
+                                            <div id="demo-result">(no input yet)</div>
+                                        </div>
+
+                                        <div class="demo-note">Preview the Voice Ed demo here. Click Start listening and speak your answer to see a sample recognition result. Download the full project to try the complete version locally.</div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-actions">
+                                    <a href="csp-draft.pptx" class="btn" download>Download Demo</a>
+                                    <label for="demo-modal" class="btn">Close</label>
+                                </div>
+                                <script>
+                                    (function(){
+                                        const demoModal = document.getElementById('demo-modal');
+                                        const radios = ['demo-q1','demo-q2','demo-q3'];
+                                        function pickRandom(){
+                                            const i = Math.floor(Math.random()*radios.length);
+                                            const el = document.getElementById(radios[i]);
+                                            if(el) el.checked = true;
+                                        }
+                                        if(demoModal){
+                                            demoModal.addEventListener('change', ()=>{ if(demoModal.checked) pickRandom(); });
+                                        }
+
+                                        // Speech recognition tied to the demo-listen checkbox (label toggles it)
+                                        const demoListen = document.getElementById('demo-listen');
+                                        const demoResult = document.getElementById('demo-result');
+                                        let recognition = null;
+                                        const Rec = window.SpeechRecognition || window.webkitSpeechRecognition || null;
+                                        if(Rec){
+                                            recognition = new Rec();
+                                            recognition.lang = 'en-US';
+                                            recognition.interimResults = false;
+                                            recognition.maxAlternatives = 1;
+
+                                            recognition.onresult = (e)=>{
+                                                const text = e.results[0][0].transcript;
+                                                demoResult.textContent = text;
+                                                // basic correctness hints
+                                                if(/\b(4|four)\b/i.test(text)) demoResult.textContent += ' — ✅ Correct';
+                                            };
+
+                                            recognition.onerror = (e)=>{
+                                                demoResult.textContent = 'Error: ' + (e.error || 'unknown');
+                                            };
+                                        }
+
+                                        if(demoListen){
+                                            demoListen.addEventListener('change', ()=>{
+                                                if(demoListen.checked){
+                                                    if(!recognition){ demoResult.textContent = 'Speech recognition not supported in this browser.'; demoListen.checked = false; return }
+                                                    try{ recognition.start(); demoResult.textContent = 'Listening...'; }catch(err){ demoResult.textContent = 'Could not start recognition'; demoListen.checked = false }
+                                                } else {
+                                                    if(recognition){ try{ recognition.stop(); }catch(e){} }
+                                                    // leave last result visible
+                                                }
+                                            });
+                                        }
+                                    })();
+                                </script>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <strong>CONTACT</strong>
+            <div>Email: revanthedam@example.com &nbsp;|&nbsp; Phone: +91 8247306424 &nbsp;|&nbsp; Penamaru(V), Vemuru(M), Bapatla(D), Andhra Pradesh</div>
+        </div>
+    </footer>
+
+</body>
+</html>
